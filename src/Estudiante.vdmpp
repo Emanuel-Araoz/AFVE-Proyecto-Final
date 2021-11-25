@@ -19,6 +19,13 @@ operations
 									id_tarjeta := tId;
 									Cursos := {c.GetCursoId() |-> c | c in set cursos};) -- GetCursoId -> implementar en clase curso
 	pre forall c1, c2 in set cursos & c1<>c2 => c1.GetCursoId() <> c2.GetCursoId();
+
+	public GetTarjetaId : () ==> Tid
+	GetTarjetaId() == return id_tarjeta;
+
+	public MostrarCursos:() ==> set of Curso
+	MostrarCursos() == return rng Cursos;
+
 functions
 -- TODO Define functions here
 traces
