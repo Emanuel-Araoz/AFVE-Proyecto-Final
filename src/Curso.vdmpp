@@ -7,13 +7,13 @@ instance variables
 	private estudiantes: map Estudiante'id_tarjeta to Estudiante;
 
 operations
-public MostrarEstudiantes:()=>void
+public MostrarEstudiantes:()==>set of Estudiante'id_tarjeta
 MostrarEstudiantes()==
-(	print (dom estudiantes);
+(	return (dom estudiantes);
 );
 public IngresarEstudiante: Estudiante ==> ()
 IngresarEstudiante(es)==
-	estudiantes ++ {es.GetTarjeta() |-> es }
- ;
+	(estudiantes ++ {es.GetTarjeta() |-> es }
+ );
 
 end Curso
